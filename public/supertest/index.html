@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¡Hola Bulma!</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  </head>
+  <body>
+
+  <div id="app">
+    <div class="field">
+      <p class="control has-icons-left">
+        <input id="input" class="input" type="number" v-on:keyup="comprobarNumero" v-model="phoneNumber" placeholder="442-0000000">
+        <span class="icon is-small is-left">
+          <i class="fas fa-phone"></i>
+        </span>
+      </p>
+    </div>
+
+  <div v-bind:class="[modalClass, isActiveClass]"> <!-- is-active -->
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="card-content has-background-white">
+        <div class="media">
+          <div class="media-content">
+            <p class="subtitle is-size-6 has-text-grey-dark">
+              <strong class="is-size-6 has-text-weight-bold">{{ phoneNumber }}</strong>
+              <br>
+              El número es válido.
+            </p>
+          </div>
+        </div>  
+      </div>
+    </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+</div>
+
+<script src="js/vue.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>
